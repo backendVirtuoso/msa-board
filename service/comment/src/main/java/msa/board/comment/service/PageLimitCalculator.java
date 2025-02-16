@@ -1,4 +1,4 @@
-package msa.board.article.service;
+package msa.board.comment.service;
 
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;

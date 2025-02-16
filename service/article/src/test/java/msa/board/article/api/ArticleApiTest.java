@@ -89,8 +89,7 @@ public class ArticleApiTest {
             System.out.println("articleResponse.getArticleId() = " + articleResponse.getArticleId());
         }
 
-        // Long lastArticleId = articles1.getLast().getArticleId();  // java 21버전
-        Long lastArticleId = articles1.get(articles1.size() - 1).getArticleId();
+        Long lastArticleId = articles1.getLast().getArticleId();
         List<ArticleResponse> articles2 = restClient.get()
                 .uri("/v1/articles/infinite-scroll?boardId=1&pageSize=5&lastArticleId=%s".formatted(lastArticleId))
                 .retrieve()
