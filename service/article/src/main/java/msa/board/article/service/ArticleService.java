@@ -9,7 +9,7 @@ import msa.board.article.service.request.ArticleCreateRequest;
 import msa.board.article.service.request.ArticleUpdateRequest;
 import msa.board.article.service.response.ArticlePageResponse;
 import msa.board.article.service.response.ArticleResponse;
-import msa.board.common.snowflake.Snowflake;
+import msa.board.common.Snowflake;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

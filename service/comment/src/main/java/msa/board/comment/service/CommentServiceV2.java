@@ -9,7 +9,7 @@ import msa.board.comment.repository.CommentRepositoryV2;
 import msa.board.comment.service.request.CommentCreateRequestV2;
 import msa.board.comment.service.response.CommentPageResponse;
 import msa.board.comment.service.response.CommentResponse;
-import msa.board.common.snowflake.Snowflake;
+import msa.board.common.Snowflake;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

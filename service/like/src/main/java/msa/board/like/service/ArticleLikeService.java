@@ -1,7 +1,7 @@
 package msa.board.like.service;
 
 import lombok.RequiredArgsConstructor;
-import msa.board.common.snowflake.Snowflake;
+import msa.board.common.Snowflake;
 import msa.board.like.entity.ArticleLike;
 import msa.board.like.entity.ArticleLikeCount;
 import msa.board.like.repository.ArticleLikeCountRepository;
