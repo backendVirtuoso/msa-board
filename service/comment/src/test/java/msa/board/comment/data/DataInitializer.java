@@ -3,7 +3,7 @@ package msa.board.comment.data;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import msa.board.comment.entity.Comment;
-import msa.board.common.Snowflake;
+import msa.board.common.snowflake.Snowflake;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

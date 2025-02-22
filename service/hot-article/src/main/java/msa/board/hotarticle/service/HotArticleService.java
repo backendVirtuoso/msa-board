@@ -21,7 +21,6 @@ public class HotArticleService {
     private final ArticleClient articleClient;
     private final List<EventHandler> eventHandlers;
     private final HotArticleScoreUpdater hotArticleScoreUpdater;
-    private final HotArticleScoreCalculator hotArticleScoreCalculator;
     private final HotArticleListRepository hotArticleListRepository;
 
     public void handleEvent(Event<EventPayload> event) {

@@ -14,15 +14,15 @@ import java.time.ZoneOffset;
 public class ArticleCreatedTimeRepository {
     private final StringRedisTemplate redisTemplate;
 
-    // hot-article::article::{articleId}::create-time
-    private static final String KEY_FORMAT = "hot-article::article::%s::create-time";
+    // hot-article::article::{articleId}::created-time
+    private static final String KEY_FORMAT = "hot-article::article::%s::created-time";
 
     public void createOrUpdate(Long articleId, LocalDateTime createdAt, Duration ttl) {
         redisTemplate.opsForValue().set(
                 generateKey(articleId),
                 String.valueOf(createdAt.toInstant(ZoneOffset.UTC).toEpochMilli()),
-                ttl)
-        ;
+                ttl
+        );
     }
 
     public void delete(Long articleId) {
