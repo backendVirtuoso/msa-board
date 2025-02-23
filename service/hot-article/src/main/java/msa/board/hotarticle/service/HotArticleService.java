@@ -44,7 +44,7 @@ public class HotArticleService {
     }
 
     private boolean isArticleCreatedOrDeleted(Event<EventPayload> event) {
-        return EventType.ARTICLE_CREATED == event.getType() || EventType.ARTICLE_DELETE == event.getType();
+        return EventType.ARTICLE_CREATED == event.getType() || EventType.ARTICLE_DELETED == event.getType();
     }
 
     public List<HotArticleResponse> readAll(String dateStr) {

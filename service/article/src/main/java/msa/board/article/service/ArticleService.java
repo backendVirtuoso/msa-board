@@ -62,7 +62,7 @@ public class ArticleService {
         Article article = articleRepository.findById(articleId).orElseThrow();
         article.update(request.getTitle(), request.getContent());
         outboxEventPublisher.publish(
-                EventType.ARTICLE_UPDATE,
+                EventType.ARTICLE_UPDATED,
                 ArticleCreatedEventPayload.builder()
                         .articleId(article.getArticleId())
                         .title(article.getTitle())
@@ -87,7 +87,7 @@ public class ArticleService {
         articleRepository.delete(article);
         boardArticleCountRepository.decrease(article.getBoardId());
         outboxEventPublisher.publish(
-                EventType.ARTICLE_DELETE,
+                EventType.ARTICLE_DELETED,
                 ArticleDeletedEventPayload.builder()
                         .articleId(article.getArticleId())
                         .title(article.getTitle())

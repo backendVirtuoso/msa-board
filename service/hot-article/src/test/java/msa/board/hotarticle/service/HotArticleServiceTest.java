@@ -63,7 +63,7 @@ class HotArticleServiceTest {
     void handlerEventIfArticleDeletedEventTest() {
         // given
         Event event = mock(Event.class);
-        given(event.getType()).willReturn(EventType.ARTICLE_DELETE);
+        given(event.getType()).willReturn(EventType.ARTICLE_DELETED);
 
         EventHandler eventHandler = mock(EventHandler.class);
         given(eventHandler.supports(event)).willReturn(true);
